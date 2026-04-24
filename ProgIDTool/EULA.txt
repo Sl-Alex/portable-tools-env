@@ -1,0 +1,31 @@
+End User License Agreement (EULA)
+Last Updated: 06.06.2024
+
+This End User License Agreement ("Agreement") is a legal agreement between you ("User" or "You") and Kolbi.cz ("Licensor") for the use of ProgIDTool ("Software"). By downloading, installing, or using the Software, you agree to be bound by the terms of this Agreement.
+
+1. License Grant
+The Licensor grants you a non-exclusive, non-transferable, revocable license to use the Software for personal and commercial purposes, subject to the following conditions:
+
+- You may not modify, alter, or create derivative works of the Software.
+- You must retain all copyright and proprietary notices included in the Software.
+- You must give appropriate credit to the Licensor when using the Software.
+
+2. Distribution
+You are permitted to distribute the Software, provided that:
+
+- The Software is distributed in its original, unmodified form.
+- This Agreement is included with any distribution.
+- No fees are charged for the Software itself.
+- The Software is not bundled with any commercial software or product.
+
+3. No Warranty
+The Software is provided "as is," without any warranties of any kind, either express or implied. The Licensor does not warrant that the Software will be error-free or that it will meet your requirements.
+
+4. Limitation of Liability
+In no event shall the Licensor be liable for any damages arising out of the use or inability to use the Software, including but not limited to direct, indirect, incidental, punitive, and consequential damages.
+
+5. Termination
+This Agreement will terminate automatically if you fail to comply with any of its terms. Upon termination, you must cease all use and distribution of the Software and destroy any copies in your possession.
+
+7. Contact Information
+If you have any questions about this Agreement, please contact support@kolbi.cz
