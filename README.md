@@ -72,3 +72,4 @@ git config core.eol crlf
 
 - File association management depends on external tools and Windows internals. Some associations are protected and cannot be easily modified. This is what SetUserFTA tries to solve.
 - Environment changes apply per user and may require a new session to take effect.
+- Windows-only
