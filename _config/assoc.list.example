@@ -1,0 +1,17 @@
+# 1. extension -> ProgID association, tab-separated
+.txt		portable.text
+.md			portable.text
+.log		portable.text
+
+.pdf		portable.pdf
+.djvu		portable.djvu
+
+.drawio		portable.DrawIO
+.ffs_gui	portable.FreeFileSync
+
+# 2. ProgID -> command line association, tab-separated
+portable.text			$BASE$\NPP\notepad++.exe "%1"
+portable.pdf			$BASE$\SumatraPDF\SumatraPDF.exe "%1"
+portable.djvu			$BASE$\SumatraPDF\SumatraPDF.exe "%1"
+portable.DrawIO			$BASE$\DrawIO\draw.io.exe "%1"
+portable.FreeFileSync	$BASE$\FreeFileSync\FreeFileSync.exe "%1"

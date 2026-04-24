@@ -46,7 +46,11 @@ foreach ($p in $currentList) {
 # =====================================================
 $newItems =
     Get-Content $ListFile |
-    Where-Object { $_ -and $_.Trim() -ne "" } |
+    ForEach-Object { $_.Trim() } |
+    Where-Object {
+        $_ -ne "" -and
+        -not $_.StartsWith("#")
+    } |
     ForEach-Object { Resolve-PathTemplate $_ $base }
 
 # =====================================================

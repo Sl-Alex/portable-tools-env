@@ -1,0 +1,17 @@
+# A simple list of paths to add to a user PATH
+$BASE$\CMake\cmake-4.1.2-windows-x86_64\bin
+$BASE$\Ninja
+$BASE$\AndroidPlatformTools
+$BASE$\GDB\BlackMagicProbe\build
+$BASE$\OneLiners
+$BASE$\SourceGit
+$BASE$\Git\cmd
+$BASE$\NPP
+$BASE$\Toolchains\mingw64\bin
+$BASE$\WinPython\WPy64-31700\python
+$BASE$\WinPython\WPy64-31700\python\Scripts
+$BASE$\Go\go1.25.3.windows-amd64\bin
+$BASE$\Go\gopath\bin
+$BASE$\Rust\cargo\bin
+$BASE$\Java\JDK\jdk-25.0.1\bin
+$BASE$\TeXLive\2025\bin\windows\

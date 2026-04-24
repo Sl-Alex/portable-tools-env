@@ -7,11 +7,20 @@
 # 2. allow root scripts
 # =====================================
 !.gitignore
-!prepare.bat
-!clean.bat
+!install.bat
+!uninstall.bat
 
 # =====================================
 # 3. allow scripts in _config directory
 # =====================================
 !_config/
 !_config/*.ps1
+!_config/*.list.example
+
+# =====================================
+# 4. allow necessary tools
+# =====================================
+!ProgIDTool/
+!ProgIDTool/*
+!SetUserFTA/
+!SetUserFTA/*
