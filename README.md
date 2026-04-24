@@ -68,6 +68,12 @@ git config core.eol crlf
 
 ---
 
+## Recommendations
+
+- Make sure you have CRLF line endings in all scripts and configuration files
+- Keep a PORTABLE_ROOT folder as close to the root of the drive as possible to keep paths short
+- Avoid spaces in the PORTABLE_ROOT path
+
 ## Limitations
 
 - File association management depends on external tools and Windows internals. Some associations are protected and cannot be easily modified. This is what SetUserFTA tries to solve.
