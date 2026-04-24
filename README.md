@@ -33,9 +33,9 @@ Portable applications and tools should be placed in the repository root and are 
 - Windows 10 or later
 - PowerShell
 
-## Third-party utilities
+## Third-party tools
 
-The following third-party utilities are included:
+The following third-party tools are included:
 
 - SetUserFTA  
   Used for managing file extension associations (default applications)
@@ -73,3 +73,7 @@ git config core.eol crlf
 - File association management depends on external tools and Windows internals. Some associations are protected and cannot be easily modified. This is what SetUserFTA tries to solve.
 - Environment changes apply per user and may require a new session to take effect.
 - Windows-only
+
+## License
+
+Everything (except of third-party tools) is licensed under Unlicense license, see LICENSE file for details. Third-party tools have their own non-commercial licenses (see "thirt-party tools" chapter above).
