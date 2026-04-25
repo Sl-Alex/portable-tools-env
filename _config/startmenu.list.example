@@ -1,37 +1,40 @@
 # Start menu configuration
 # A list of Program Name -> Program executable -> Program icon (optional), tab-separated
-AutoRuns			$BASE$\AutoRuns\Autoruns64.exe
-BleachBit			$BASE$\BleachBit\bleachbit.exe
-Bruno				$BASE$\Bruno\bruno.exe
-CCleaner			$BASE$\CCleaner\CCleaner64.exe
-ConEmu				$BASE$\ConEmu\ConEmu64.exe
-Calc				$BASE$\OneLiners\calc.exe
-CurrPorts			$BASE$\CurrPorts\cports.exe
-Dependency Walker	$BASE$\DependencyWalker\depends.exe
-Diffinity			$BASE$\Diffinity\Diffinity.exe
-Double Commander	$BASE$\DoubleCmd\doublecmd.exe
-DrawIO				$BASE$\DrawIO\draw.io.exe
-FreeCAD 1.1 rc1		$BASE$\FreeCAD\FreeCAD_1.1rc1\FreeCAD.exe
-FreeFileSync		$BASE$\FreeFileSync\FreeFileSync.exe
-Ghidra				$BASE$\Ghidra\ghidra.bat		$BASE$\Ghidra\ghidra.ico
-GIMP				$BASE$\GIMP\GIMPPortable.exe
-GoldenDict			$BASE$\GoldenDict\GoldenDict.exe
-H2TestW				$BASE$\H2TestW\h2testw.exe
-HwInfo				$BASE$\HwInfo\HWiNFO64.exe
-HxD					$BASE$\HxD\HxD64.exe
-ImageUSB			$BASE$\ImageUSB\imageUSB.exe
-Inkscape			$BASE$\Inkscape\bin\inkscape.exe
-NAPS2				$BASE$\NAPS\NAPS2.Portable.exe
-Notepad++			$BASE$\NPP\notepad++.exe
-Process Explorer	$BASE$\OneLiners\procexp.exe
-PuTTY portable		$BASE$\PuTTYPortable\putty.exe
-RocketDock			$BASE$\RocketDock\RocketDock.exe
-SourceGit			$BASE$\SourceGit\SourceGit.exe
-SumatraPDF			$BASE$\SumatraPDF\SumatraPDF.exe
-Total Commander		$BASE$\TotalCmd\TOTALCMD.exe
-UsbDeview			$BASE$\UsbDeview\USBDeview.exe
-UsbTreeView			$BASE$\UsbTreeView\UsbTreeView.exe
-VSCode				$BASE$\VSCode\Code.exe
-VSCodium			$BASE$\VSCodium\VSCodium.exe
-WindTerm			$BASE$\WindTerm\WindTerm.exe
-WinSCP				$BASE$\WinSCP\WinSCP.exe
+# Relative paths are treated as relative to PORTABLE_ROOT
+# Absolute paths in shortcuts are also allowed
+# All these shortcuts will be created in a "Portable Tools" folder
+AutoRuns			AutoRuns\Autoruns64.exe
+BleachBit			BleachBit\bleachbit.exe
+Bruno				Bruno\bruno.exe
+CCleaner			CCleaner\CCleaner64.exe
+ConEmu				ConEmu\ConEmu64.exe
+Calc				OneLiners\calc.exe
+CurrPorts			CurrPorts\cports.exe
+Dependency Walker	DependencyWalker\depends.exe
+Diffinity			Diffinity\Diffinity.exe
+Double Commander	DoubleCmd\doublecmd.exe
+DrawIO				DrawIO\draw.io.exe
+FreeCAD 1.1 rc1		FreeCAD\FreeCAD_1.1rc1\FreeCAD.exe
+FreeFileSync		FreeFileSync\FreeFileSync.exe
+Ghidra				Ghidra\ghidra.bat		Ghidra\ghidra.ico
+GIMP				GIMP\GIMPPortable.exe
+GoldenDict			GoldenDict\GoldenDict.exe
+H2TestW				H2TestW\h2testw.exe
+HwInfo				HwInfo\HWiNFO64.exe
+HxD					HxD\HxD64.exe
+ImageUSB			ImageUSB\imageUSB.exe
+Inkscape			Inkscape\bin\inkscape.exe
+NAPS2				NAPS\NAPS2.Portable.exe
+Notepad++			NPP\notepad++.exe
+Process Explorer	OneLiners\procexp.exe
+PuTTY portable		PuTTYPortable\putty.exe
+RocketDock			RocketDock\RocketDock.exe
+SourceGit			SourceGit\SourceGit.exe
+SumatraPDF			SumatraPDF\SumatraPDF.exe
+Total Commander		TotalCmd\TOTALCMD.exe
+UsbDeview			UsbDeview\USBDeview.exe
+UsbTreeView			UsbTreeView\UsbTreeView.exe
+VSCode				VSCode\Code.exe
+VSCodium			VSCodium\VSCodium.exe
+WindTerm			WindTerm\WindTerm.exe
+WinSCP				WinSCP\WinSCP.exe
