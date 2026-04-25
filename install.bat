@@ -20,13 +20,13 @@ echo [SECTION] Paths
 powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_path.ps1" "%BASE%\_config\paths.list"
 
 echo [SECTION] Environment vars
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\env_add.ps1" "%BASE%\_config\env.list"
+powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_env.ps1" "%BASE%\_config\env.list"
 
 echo [SECTION] File associations
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\assoc_add.ps1" "%BASE%\_config\assoc.list"
+powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_assoc.ps1" "%BASE%\_config\assoc.list"
 
 echo [SECTION] Start menu
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\startmenu_add.ps1" "%BASE%\_config\startmenu.list"
+powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_startmenu.ps1" "%BASE%\_config\startmenu.list"
 
 echo.
 echo ========================================

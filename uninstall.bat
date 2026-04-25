@@ -25,7 +25,7 @@ if exist "%SM%" (
 echo.
 
 echo [SECTION] File associations
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\assoc_remove.ps1" "%BASE%\_config\assoc.list"
+powershell -ExecutionPolicy Bypass -File "%BASE%\_config\remove_assoc.ps1" "%BASE%\_config\assoc.list"
 echo.
 
 echo [SECTION] Paths
