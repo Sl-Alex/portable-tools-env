@@ -4,7 +4,20 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-Get-Content $ListFile | ForEach-Object {
+# base (for tools location)
+. "$PSScriptRoot\common.ps1"
+$base = Get-PortableRoot
+
+# tools
+$setUserFta = Join-Path $base "SetUserFTA\SetUserFTA.exe"
+$progIdTool = Join-Path $base "ProgIDTool\ProgIDTool.exe"
+
+function Invoke-Tool($cmd, $args) {
+    & $cmd @args
+}
+
+Get-Content $ListFile |
+ForEach-Object {
 
     $line = $_.Trim()
 
@@ -24,13 +37,14 @@ Get-Content $ListFile | ForEach-Object {
 
         Write-Host "[DEL] extension $left"
 
-        Remove-Item "HKCU:\Software\Classes\$left" -Recurse -Force -ErrorAction SilentlyContinue
+        Invoke-Tool $setUserFta @("del", $left)
     }
+
     else {
 
         Write-Host "[DEL] ProgID $left"
 
-        Remove-Item "HKCU:\Software\Classes\$left" -Recurse -Force -ErrorAction SilentlyContinue
+        Invoke-Tool $progIdTool @("delete", "HKCU", $left)
     }
 }
 
