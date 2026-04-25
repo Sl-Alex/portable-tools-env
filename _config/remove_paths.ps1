@@ -1,19 +1,12 @@
-param(
-    [string]$ListFile
-)
+param()
 
 $ErrorActionPreference = "Stop"
 
 # =====================================================
-# BASE for template resolution
+# portable ownership root
 # =====================================================
 . "$PSScriptRoot\common.ps1"
 $base = Get-PortableRoot
-
-function Resolve-PathTemplate($p, $base) {
-    if ([string]::IsNullOrWhiteSpace($p)) { return $null }
-    return $p.Replace('$BASE$', $base).Trim()
-}
 
 function Normalize($p) {
     if ([string]::IsNullOrWhiteSpace($p)) { return $null }
@@ -27,38 +20,16 @@ $currentRaw = [Environment]::GetEnvironmentVariable("Path", "User")
 
 $currentList =
 if ($currentRaw) {
-    $currentRaw -split ';' | ForEach-Object { Normalize $_ } | Where-Object { $_ }
-} else {
+    $currentRaw -split ';' |
+    ForEach-Object { Normalize $_ } |
+    Where-Object { $_ }
+}
+else {
     @()
 }
 
 # =====================================================
-# read remove list (with template resolution)
-# =====================================================
-if (-not (Test-Path $ListFile)) {
-    throw "List not found: $ListFile"
-}
-
-$removeList =
-    Get-Content $ListFile |
-    Where-Object { $_ -and $_.Trim() -ne "" } |
-    ForEach-Object { Resolve-PathTemplate $_ $base }
-
-# =====================================================
-# normalize sets
-# =====================================================
-$removeSet = [System.Collections.Generic.HashSet[string]]::new(
-    [System.StringComparer]::OrdinalIgnoreCase
-)
-
-foreach ($p in $removeList) {
-    if ($p) {
-        $removeSet.Add($p) | Out-Null
-    }
-}
-
-# =====================================================
-# remove (difference operation)
+# remove owned entries
 # =====================================================
 $result = @()
 
@@ -66,16 +37,20 @@ foreach ($p in $currentList) {
 
     if (-not $p) { continue }
 
-    if ($removeSet.Contains($p)) {
-        Write-Host "[REM] $p"
-        continue
-	}
+    $normalized = Normalize $p
 
-    $result += $p
+    if (-not $normalized) { continue }
+
+    if ($normalized.StartsWith($base, [System.StringComparison]::OrdinalIgnoreCase)) {
+        Write-Host "[DEL ] $normalized"
+        continue
+    }
+
+    $result += $normalized
 }
 
 # =====================================================
-# final cleanup (VERY IMPORTANT)
+# final cleanup
 # =====================================================
 $result =
     $result |

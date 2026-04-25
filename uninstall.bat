@@ -29,7 +29,7 @@ powershell -ExecutionPolicy Bypass -File "%BASE%\_config\assoc_remove.ps1" "%BAS
 echo.
 
 echo [SECTION] Paths
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\remove_paths.ps1" "%BASE%\_config\paths.list"
+powershell -ExecutionPolicy Bypass -File "%BASE%\_config\remove_paths.ps1"
 echo.
 
 echo [SECTION] Environment vars

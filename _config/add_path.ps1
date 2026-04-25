@@ -9,12 +9,21 @@ $ErrorActionPreference = "Stop"
 $base = Get-PortableRoot
 
 # =====================================================
-# helper: resolve $BASE$
+# helper: resolve relative path
 # =====================================================
-function Resolve-PathTemplate($p, $base) {
-    if ([string]::IsNullOrWhiteSpace($p)) { return $null }
+function Resolve-PortablePath($p, $base) {
 
-    return $p.Replace('$BASE$', $base).Trim()
+    if ([string]::IsNullOrWhiteSpace($p)) {
+        return $null
+    }
+
+    $p = $p.Trim()
+
+    if ([System.IO.Path]::IsPathRooted($p)) {
+        return $p
+    }
+
+    return (Join-Path $base $p)
 }
 
 # =====================================================
@@ -51,7 +60,7 @@ $newItems =
         $_ -ne "" -and
         -not $_.StartsWith("#")
     } |
-    ForEach-Object { Resolve-PathTemplate $_ $base }
+    ForEach-Object { Resolve-PortablePath $_ $base }
 
 # =====================================================
 # add

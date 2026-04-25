@@ -1,17 +1,22 @@
 # A simple list of paths to add to a user PATH
-$BASE$\CMake\cmake-4.1.2-windows-x86_64\bin
-$BASE$\Ninja
-$BASE$\AndroidPlatformTools
-$BASE$\GDB\BlackMagicProbe\build
-$BASE$\OneLiners
-$BASE$\SourceGit
-$BASE$\Git\cmd
-$BASE$\NPP
-$BASE$\Toolchains\mingw64\bin
-$BASE$\WinPython\WPy64-31700\python
-$BASE$\WinPython\WPy64-31700\python\Scripts
-$BASE$\Go\go1.25.3.windows-amd64\bin
-$BASE$\Go\gopath\bin
-$BASE$\Rust\cargo\bin
-$BASE$\Java\JDK\jdk-25.0.1\bin
-$BASE$\TeXLive\2025\bin\windows\
+# Relative paths are treated as relative to PORTABLE_ROOT
+CMake\cmake-4.1.2-windows-x86_64\bin
+Ninja
+AndroidPlatformTools
+GDB\BlackMagicProbe\build
+OneLiners
+SourceGit
+Git\cmd
+NPP
+Toolchains\mingw64\bin
+WinPython\WPy64-31700\python
+WinPython\WPy64-31700\python\Scripts
+Go\go1.25.3.windows-amd64\bin
+Go\gopath\bin
+Rust\cargo\bin
+Java\JDK\jdk-25.0.1\bin
+TeXLive\2025\bin\windows\
+
+# Absolute paths are also allowed and added as-is
+# They won't be removed during uninstallation
+# C:\Windows\System32
