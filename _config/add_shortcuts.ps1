@@ -1,13 +1,12 @@
 param(
-    [string]$ListFile
+    [string]$ListFile,
+    [string]$TargetFolder
 )
 
 $ErrorActionPreference = "Stop"
 
 . "$PSScriptRoot\common.ps1"
 $base = Get-PortableRoot
-
-$startMenu = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\PortableTools"
 
 function Resolve-PortablePath($p) {
 
@@ -24,7 +23,11 @@ function Resolve-PortablePath($p) {
     return (Join-Path $base $p)
 }
 
-New-Item -ItemType Directory -Force -Path $startMenu | Out-Null
+if (-not $TargetFolder) {
+    throw "TargetFolder not specified"
+}
+
+New-Item -ItemType Directory -Force -Path $TargetFolder | Out-Null
 
 Get-Content $ListFile |
 ForEach-Object { $_.Trim() } |
@@ -56,7 +59,7 @@ ForEach-Object {
     Write-Host "[ADD] $title - $exe"
 
     $shell = New-Object -ComObject WScript.Shell
-    $sc = $shell.CreateShortcut("$startMenu\$title.lnk")
+    $sc = $shell.CreateShortcut((Join-Path $TargetFolder "$title.lnk"))
 
     $sc.TargetPath = $exe
     $sc.WorkingDirectory = Split-Path $exe

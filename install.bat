@@ -26,7 +26,9 @@ echo [SECTION] File associations
 powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_assoc.ps1" "%BASE%\_config\assoc.list"
 
 echo [SECTION] Start menu
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_startmenu.ps1" "%BASE%\_config\startmenu.list"
+powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_shortcuts.ps1" ^
+    "%BASE%\_config\startmenu.list" ^
+    "%APPDATA%\Microsoft\Windows\Start Menu\Programs\PortableTools"
 
 echo.
 echo ========================================
