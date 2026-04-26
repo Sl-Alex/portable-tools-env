@@ -9,6 +9,7 @@ It is designed to configure and manage:
 - user environment variables
 - file associations
 - Start Menu shortcuts
+- Autostart shortcuts
 
 All configuration is defined through declarative list files and executed via PowerShell and batch scripts.
 
