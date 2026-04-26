@@ -1,0 +1,7 @@
+# Startup configuration
+# A list of Program Name -> Program executable -> Program icon (optional), tab-separated
+# Relative paths are treated as relative to PORTABLE_ROOT
+# Absolute paths in shortcuts are also allowed
+# Only shortcuts within PORTABLE_ROOT will be deleted during uninstallation
+Ghidra				Ghidra\ghidra.bat		Ghidra\ghidra.ico
+Total Commander		TotalCmd\TOTALCMD.exe

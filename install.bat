@@ -30,6 +30,11 @@ powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_shortcuts.ps1" ^
     "%BASE%\_config\startmenu.list" ^
     "%APPDATA%\Microsoft\Windows\Start Menu\Programs\PortableTools"
 
+echo [SECTION] Startup
+powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_shortcuts.ps1" ^
+    "%BASE%\_config\startup.list" ^
+    "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
+
 echo.
 echo ========================================
 echo   CONFIGURATION COMPLETE
