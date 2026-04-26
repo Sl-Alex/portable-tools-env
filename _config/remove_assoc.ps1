@@ -12,10 +12,6 @@ $base = Get-PortableRoot
 $setUserFta = Join-Path $base "SetUserFTA\SetUserFTA.exe"
 $progIdTool = Join-Path $base "ProgIDTool\ProgIDTool.exe"
 
-function Invoke-Tool($cmd, $args) {
-    & $cmd @args
-}
-
 Get-Content $ListFile |
 ForEach-Object {
 
@@ -37,14 +33,14 @@ ForEach-Object {
 
         Write-Host "[DEL] extension $left"
 
-        Invoke-Tool $setUserFta @("del", $left)
+        & $setUserFta del $left
     }
 
     else {
 
         Write-Host "[DEL] ProgID $left"
 
-        Invoke-Tool $progIdTool @("delete", "HKCU", $left)
+        & $progIdTool delete HKCU $left
     }
 }
 
