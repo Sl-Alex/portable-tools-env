@@ -13,6 +13,8 @@ It is designed to configure and manage:
 
 All configuration is defined through declarative list files and executed via PowerShell and batch scripts.
 
+Scripts are designed for repeatable execution without side effects.
+
 The system is portable and can be moved between machines as long as the same directory structure is preserved. Admin rights are not required, only user-related configuration is modified.
 
 ## Structure
@@ -47,14 +49,6 @@ The following third-party tools are included:
 These tools are distributed under their own non-commercial licenses.
 
 License files for these tools are located in the same directories as their respective executables.
-
----
-
-## Notes about *.list files
-
-- `$BASE$` is resolved to `PORTABLE_ROOT`
-- Configuration is idempotent where possible
-- Scripts are designed for repeatable execution without side effects
 
 ---
 
