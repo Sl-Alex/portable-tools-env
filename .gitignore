@@ -11,11 +11,15 @@
 !uninstall.bat
 
 # =====================================
-# 3. allow scripts in _config directory
+# 3. allow scripts in _tools directory
 # =====================================
-!_config/
-!_config/*.ps1
-!_config/*.list.example
+!_tools/
+!_tools/*
+#!_tools/core/
+!_tools/core/*
+#!_tools/config/
+!_tools/config/*.list.example
+
 
 # =====================================
 # 4. allow necessary tools

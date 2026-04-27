@@ -17,6 +17,9 @@ Scripts are designed for repeatable execution without side effects.
 
 The system is portable and can be moved between machines as long as the same directory structure is preserved. Admin rights are not required, only user-related configuration is modified.
 
+The system includes a convenient command-line release monitoring tool, which lives in `_tools\release-monitor`. You can use it by running `_tools\release-monitor\install.bat` once, which downloads Deno tool, that allows to fetch and parse HTML pages.
+Put a list of apps you want to monitor to `_tools\release-monitor\apps.json` and run `check_versions.bat`. You will get a list of apps to update.
+
 ## Structure
 
 ```

@@ -17,22 +17,22 @@ set "PORTABLE_ROOT=%BASE%"
 
 echo.
 echo [SECTION] Paths
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_path.ps1" "%BASE%\_config\paths.list"
+powershell -ExecutionPolicy Bypass -File "%BASE%\_tools\core\add_path.ps1" "%BASE%\_tools\config\paths.list"
 
 echo [SECTION] Environment vars
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_env.ps1" "%BASE%\_config\env.list"
+powershell -ExecutionPolicy Bypass -File "%BASE%\_tools\core\add_env.ps1" "%BASE%\_tools\config\env.list"
 
 echo [SECTION] File associations
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_assoc.ps1" "%BASE%\_config\assoc.list"
+powershell -ExecutionPolicy Bypass -File "%BASE%\_tools\core\add_assoc.ps1" "%BASE%\_tools\config\assoc.list"
 
 echo [SECTION] Start menu
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_shortcuts.ps1" ^
-    "%BASE%\_config\startmenu.list" ^
+powershell -ExecutionPolicy Bypass -File "%BASE%\_tools\core\add_shortcuts.ps1" ^
+    "%BASE%\_tools\config\startmenu.list" ^
     "%APPDATA%\Microsoft\Windows\Start Menu\Programs\PortableTools"
 
 echo [SECTION] Startup
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\add_shortcuts.ps1" ^
-    "%BASE%\_config\startup.list" ^
+powershell -ExecutionPolicy Bypass -File "%BASE%\_tools\core\add_shortcuts.ps1" ^
+    "%BASE%\_tools\config\startup.list" ^
     "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
 
 echo.

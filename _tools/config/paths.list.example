@@ -16,6 +16,7 @@ Go\gopath\bin
 Rust\cargo\bin
 Java\JDK\jdk-25.0.1\bin
 TeXLive\2025\bin\windows\
+_tools\release-monitor\tools
 
 # Absolute paths are also allowed and added as-is
 # They won't be removed during uninstallation

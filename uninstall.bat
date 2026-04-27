@@ -13,7 +13,7 @@ set "FTA=%BASE%\SetUserFTA\SetUserFTA.exe"
 set "PROGID=%BASE%\ProgIDTool\ProgIDTool.exe"
 
 echo [SECTION] Startup
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\remove_shortcuts.ps1" ^
+powershell -ExecutionPolicy Bypass -File "%BASE%\_tools\core\remove_shortcuts.ps1" ^
     "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
 echo.
 
@@ -30,15 +30,15 @@ if exist "%SM%" (
 echo.
 
 echo [SECTION] File associations
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\remove_assoc.ps1" "%BASE%\_config\assoc.list"
+powershell -ExecutionPolicy Bypass -File "%BASE%\_tools\core\remove_assoc.ps1" "%BASE%\_tools\config\assoc.list"
 echo.
 
 echo [SECTION] Paths
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\remove_paths.ps1"
+powershell -ExecutionPolicy Bypass -File "%BASE%\_tools\core\remove_paths.ps1"
 echo.
 
 echo [SECTION] Environment vars
-powershell -ExecutionPolicy Bypass -File "%BASE%\_config\remove_env.ps1" "%BASE%\_config\env.list"
+powershell -ExecutionPolicy Bypass -File "%BASE%\_tools\core\remove_env.ps1" "%BASE%\_tools\config\env.list"
 
 echo.
 echo ========================================
